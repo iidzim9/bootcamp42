@@ -1,0 +1,6 @@
+pip3 list
+conda list
+pip3 show numpy
+pip3 install pip-search
+pip_search tesseract
+pip3 freeze -r requirements.txt > requirements.txt
