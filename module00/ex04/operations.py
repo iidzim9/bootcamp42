@@ -14,8 +14,12 @@ else:
         print("Sum : %d" % (a+b))
         print("Difference : %d" % (a-b))
         print("Product : %d" % (a*b))
-        print("Quotient : %d" % (a/b))
-        print("Remainder : %d" % (a%b))
+        if a == 0 or b == 0:
+            print("Quotient : ERROR (div by zero)")
+            print("Remainder : ERROR (div by zero)")
+        else:
+            print("Quotient : %d" % (a/b))
+            print("Remainder : %d" % (a%b))
     else:
         print("Usage: python operations.py <number1> <number2>\nExample:\n\tpython operations.py 10 3")
 
