@@ -1,4 +1,5 @@
 import string
+from sys import argv
 
 morse = { 'A':'.-', 'B':'-...', 'C':'-.-.', 'D':'-..', 'E':'.',
         'F':'..-.', 'G':'--.', 'H':'....', 'I':'..', 'J':'.---', 'K':'-.-',
@@ -22,6 +23,13 @@ def translator(text):
             if c in morse:
                 code += morse[c]
             code += ' '
-        if w:
-            code += '/'
-    print(code)
+    return code
+
+text = ""
+out = ""
+for arg in argv[1:]:
+    text += arg + ' '
+text = text.split()
+for w in text:
+    out += translator(w) + '/ '
+print(out[:-3])
