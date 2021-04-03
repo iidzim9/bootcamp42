@@ -32,5 +32,3 @@ class Book:
 		for r in self.recipes_list.keys():
 			if recipe.recipe_type == r:
 				self.recipes_list.get(r).append(recipe)
-
-	

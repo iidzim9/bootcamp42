@@ -1,15 +1,15 @@
 # Python program to demonstrate
 # sys.argv
 
-import sys
+from sys import argv 
 
-n = len(sys.argv)
+n = len(argv)
 word = ""
 car = ''
 for i in reversed(range(1, n)):
-    s = len(str(sys.argv[i]))
+    s = len(str(argv[i]))
     for j in reversed(range(0, s)):
-        c = sys.argv[i][j]
+        c = argv[i][j]
         if c.islower():
             c = c.upper()
         else:
