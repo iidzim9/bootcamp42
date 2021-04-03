@@ -23,4 +23,20 @@ class Matrix:
     def __rsub__(self, vect):
         return self.__sub__(vect) * (-1)
 
+    def __truediv__(self, vect):
+        pass
 
+    def __rtruediv__(self, vect):
+        pass
+
+    def __mul__(self, vect):
+        pass
+
+    def __rmul__(self, vect):
+        return self.__mul__(vect)
+
+    def __str__(self):
+        return 'Matrix: {self.data}\nShape: {self.shape}\n'.format(self=self)
+
+    def __repr__(self):
+        return '{self.data} {self.shape}'.format(self=self)
