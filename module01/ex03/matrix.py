@@ -1,14 +1,17 @@
+from ../ex02/ve
+
 class Matrix:
     def __init__(self, arg):
         if isinstance(arg, tuple):
             self.data=[]
-            for i in range(0,arg[0]):
-                for j in range(0,arg[1]):
-                    self.data[i][j].append(i)
+            # for i in range(0,arg[0]):
+                # for j in range(0,arg[1]):
+            self.data.append(range(0,arg[0]))
+            self.data.append(range(arg[0],arg[1]))
             # self.arg = [float(i,j) for i, j in zip(arg[0], arg[1])]
         else:
-            self.arg = arg
-        self.shape = (len(self.arg), len(self.arg[0]))
+            self.data = arg
+        self.shape = (len(self.data), len(self.data[0]))
 
     def __add__(self, vect):
         pass
