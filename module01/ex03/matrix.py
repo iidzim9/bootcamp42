@@ -1,4 +1,4 @@
-from ../ex02/ve
+# from ../ex02/vector
 
 class Matrix:
     def __init__(self, arg):
