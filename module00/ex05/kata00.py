@@ -1,4 +1,5 @@
 import string
 
 t = (19,42,21)
-print("The 3 numbers are: %d ,%d ,%d" % t)
+print("The %d numbers are: " % len(t), end="")
+print("%d ,%d ,%d" % t)

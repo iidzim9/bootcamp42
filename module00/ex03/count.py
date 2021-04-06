@@ -16,11 +16,14 @@ def text_analyzer(*arg):
         upper = 0
         space = 0
         punct = 0
+        char = 0
         for c in s:
             lower += c.islower()
             upper += c.isupper()
             space += c.isspace()
             punct += 1 if c in string.punctuation else 0
+        char = lower + upper + space + punct
+        print("the text contains %d characters:" % char)
         print("- %d upper letters" % upper)
         print("- %d lower letters" % lower)
         print("- %d punctuation marks" % punct)

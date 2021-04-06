@@ -18,3 +18,6 @@ for i in reversed(range(1, n)):
     if i > 1:
         word += " "
 print(word, end="")
+
+
+# out = word.swapcase()

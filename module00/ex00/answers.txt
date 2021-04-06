@@ -1,5 +1,5 @@
+conda list -c
 pip3 list
-conda list
 pip3 show numpy
 pip3 install pip-search
 pip_search tesseract

@@ -6,7 +6,7 @@ if len(sys.argv) == 3:
     if s.isdigit():
         print("ERROR")
         exit()
-    elif n.isdigit():
+    elif n.isdecimal():
         n = int(n)
         s = s.replace(',', ' ')
         words = s.split()

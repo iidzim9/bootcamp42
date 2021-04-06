@@ -16,7 +16,7 @@ def translator(text):
     words = text.split()
     for w in words:
         w = w.upper()
-        if w.isalnum() == False:
+        if not w.isalnum():
             print("ERROR")
             return
         for c in w:

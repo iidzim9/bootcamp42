@@ -19,19 +19,20 @@ cookbook = {
 }
 
 def funct():
-    x = int(input("Please select an option by typing the corresponding number:\n1: Add a recipe\n2: Delete a recipe\n3: Print a recipe\n4: Print the cookbook\n5: Quit\n"))
-    if x == 1:
-        add_recipe()
-    elif x == 2:
-        delete_recipe()
-    elif x == 3:
-        print_recipe()
-    elif x == 4:
-        print_cookbook()
-    elif x == 5:
-        quit_cookbook()
-    else:
-        print("This option does not exist, please type the corresponding number.\nTo exit, enter 5.")
+    while (True):
+        x = int(input("Please select an option by typing the corresponding number:\n1: Add a recipe\n2: Delete a recipe\n3: Print a recipe\n4: Print the cookbook\n5: Quit\n>> "))
+        if x == 1:
+            add_recipe()
+        elif x == 2:
+            delete_recipe()
+        elif x == 3:
+            print_recipe()
+        elif x == 4:
+            print_cookbook()
+        elif x == 5:
+            quit_cookbook()
+        else:
+            print("This option does not exist, please type the corresponding number.\nTo exit, enter 5.")
 
     
 def add_recipe():
@@ -48,10 +49,10 @@ def delete_recipe():
     del cookbook[key]
 
 def print_recipe():
-    key = input("choose a recipe \n")
+    key = input("Please enter the recipe's name to get its details:\n>> ")
     s = cookbook.get(key)
     if not s:
-        print("ERROR")
+        print("This option does not exist, please type the corresponding number.\nTo exit, enter 5.\n")
         return
     print("Recipe for " + key)
     print("Ingredients list: ", end="")
@@ -61,16 +62,14 @@ def print_recipe():
     print("Takes ", end="") 
     print(s['prep_time'], end="")
     print("minutes of cooking")
+    print(" ")
 
 def print_cookbook():
     print(cookbook)
+    print(" ")
 
 def quit_cookbook():
     print("Cookbook closed.")
     exit()
 
-
-# for recipe, info in cookbook.items():
-#     print("\nrecipe : ", recipe)
-#     for key in info:
-#         print(key + " : " , info[key])
+funct()
