@@ -15,8 +15,30 @@ class Account(object):
         self.value += amount
 
 class Bank:
-# an even number of attributes -> nbr % 2 == 0
-# an attribute starting with b -> 
-# no attribute starting with zip or addr
-# no attribute name, id and value
-    pass
+    """The bank"""
+    # an even number of attributes -> nbr % 2 == 0
+    # an attribute starting with b -> 
+    # no attribute starting with zip or addr
+    # no attribute name, id and value
+    def __init__(self):
+        self.account = []
+
+    def add(self, account):
+        self.account.append(account)
+
+    def transfer(self, origin, dest, amount):
+        """
+            @origin:  int(id) or str(name) of the first account
+            @dest:    int(id) or str(name) of the destination account
+            @amount:  float(amount) amount to transfer
+            @return         True if success, False if an error occured
+        """
+        pass
+
+    def fix_account(self, account):
+        """
+            fix the corrupted account
+            @account: int(id) or str(name) of the account
+            @return         True if success, False if an error occured
+        """
+        pass

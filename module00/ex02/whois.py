@@ -7,8 +7,7 @@ n = len(sys.argv)
 if n == 1:
     exit()
 nb = sys.argv[1]
-b = nb.isdigit()
-if b != True:
+if not nb.isdecimal() and n > 2:
     print("ERROR")
     exit()
 if n == 2:
@@ -18,5 +17,3 @@ if n == 2:
         print("I'm Even.")
     else:
         print("I'm Odd.")
-elif n > 2:
-    print("ERROR")

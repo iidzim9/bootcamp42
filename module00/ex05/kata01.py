@@ -6,4 +6,4 @@ languages = {
     'PHP': 'Rasmus Lerdorf',
     }
 for key, value in languages.items() :
-    print (key + "was created by " +value)
+    print (str(key) + " was created by " + str(value))

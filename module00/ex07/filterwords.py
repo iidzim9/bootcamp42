@@ -15,9 +15,6 @@ if len(sys.argv) == 3:
             if len(w) > n:
                 out.append(w)
         print(out)
-    else:
-        print("ERROR")
         exit()
-else:
-    print("ERROR")
-    exit()
+print("ERROR")
+exit()

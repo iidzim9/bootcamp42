@@ -2,7 +2,7 @@ import random
 
 print("This is an interactive guessing game!\nYou have to enter a number between 1 and 99 to find out the secret number.\nType 'exit' to end the game.\nGood luck!")
 n = random.randint(0,99)
-print(n)
+# print(n)
 cpt = 0
 while True:
     nbr = input("What's your guess between 1 and 99?\n>> ")
@@ -13,7 +13,7 @@ while True:
             print("Too low!")
         elif n < x:
             print("Too high!")
-        elif n == 42 and cpt == 0:
+        elif n == 42 and cpt == 1:
             print("The answer to the ultimate question of life, the universe and everything is 42.'nCongratulations! You got it on your first try!")
         else:
             print("Congratulations, ", end = "")
