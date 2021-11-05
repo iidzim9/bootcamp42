@@ -2,7 +2,7 @@ def what_are_the_vars(*args, **keywargs):
     o = ObjectC()
     if args:
         for i, val in zip(len(args), args):
-            setattr(o + "var_" + val)
+            o.setattr("var_" + str(i) + val)
     if keywargs:
         for key in keywargs.keys():
             if "var_" in key:
@@ -29,11 +29,11 @@ def doom_printer(obj):
 if __name__ == "__main__":
     obj = what_are_the_vars(7)
     doom_printer(obj)
-    obj = what_are_the_vars("ft_lol", "Hi")
-    doom_printer(obj)
-    obj = what_are_the_vars()
-    doom_printer(obj)
-    obj = what_are_the_vars(12, "Yes", [0, 0, 0], a=10, hello="world")
-    doom_printer(obj)
-    obj = what_are_the_vars(42, a=10, var_0="world")
-    doom_printer(obj)
+    # obj = what_are_the_vars("ft_lol", "Hi")
+    # doom_printer(obj)
+    # obj = what_are_the_vars()
+    # doom_printer(obj)
+    # obj = what_are_the_vars(12, "Yes", [0, 0, 0], a=10, hello="world")
+    # doom_printer(obj)
+    # obj = what_are_the_vars(42, a=10, var_0="world")
+    # doom_printer(obj)
