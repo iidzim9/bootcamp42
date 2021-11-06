@@ -12,8 +12,7 @@ def ft_reduce(function_to_apply, list_of_inputs):
 def fact(x, y):
     return x * y
 
-print("hello world")
 l = [1, 2, 3, 4, 5, 6, 7, 8, 9]
-print(f"88list before {l}")
+print(f"**list before {l}")
 print("list after " , reduce(fact, l))
 print("list after " , ft_reduce(fact, l))

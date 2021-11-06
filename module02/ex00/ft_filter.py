@@ -12,7 +12,7 @@ def ft_filter(function_to_apply, list_of_inputs):
 def even(x):
     return True if x % 2 == 0 else False
 
-l = [2, 89, 57, 45, 34, 0, 15]
+l = [2, 89, 56, 45, 34, 0, 15]
 print(f"list before {l}")
 print("list after " , ft_filter(even, l))
 print("list after " , list(filter(even, l)))
