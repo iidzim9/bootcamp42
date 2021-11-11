@@ -2,19 +2,23 @@ import time
 from datetime import date, datetime
 from random import randint
 
-def log(function):
-	def wrapper(*argc, **kwargs):
-		start_time = datetime.now()
-		fd = open("machine.log", "a")
-		fd.write("(cmaxime)Running: -> ");
-		fd.write(function.__name__);
-		fd.write(f"		[ exec-time = {(datetime.now() - start_time)} ms ]\n")
-		fd.close()
-	return wrapper
+
 
 class CoffeeMachine():
 
 	water_level = 100
+
+	def log(functi, args):
+		def wrapper(self, *args):
+		print(args)
+			functi(self)
+			start_time = datetime.now()
+			fd = open("machine.log", "a")
+			fd.write(f"(cmaxime)Running: ->  {functi.__name__}");
+			fd.write(f"		[ exec-time = {(datetime.now() - start_time)} ms ]\n")
+			cc = 'sdsjdhsdsdsd' 'sdsdsdsdsd' 'sdsdsdsdsds' #?
+			fd.close()
+		return wrapper
 
 	@log
 	def start_machine(self):
