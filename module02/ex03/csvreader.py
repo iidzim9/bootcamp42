@@ -4,10 +4,11 @@ import csv
 
 class CsvReader():
     def __init__(self, filename=None, sep=',', header=False, skip_top=0, skip_bottom=0):
+
         pass
 
-    def __enter__(filename):
-        with open(filename) as csv_file:
+    def __enter__(self):
+        with open(self.filename) as csv_file:
             csv_reader = csv.reader(csv_file, delimiter=',')
             line_index = 0
             for row in csv_reader:
@@ -21,5 +22,10 @@ class CsvReader():
                         i += 1
         print(f'-------> line_index : {line_index}\n')             
 
-    def __exit__():
+    def __exit__(self):
         pass
+
+if __name__ == "__main__":
+    test = CsvReader()
+
+
