@@ -70,4 +70,4 @@ if __name__ == "__main__":
 		if file == None:
 			print("File is corrupted")
 
-#? access file by relative path 
+#? access file by relative path
