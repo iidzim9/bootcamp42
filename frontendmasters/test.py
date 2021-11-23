@@ -55,4 +55,3 @@ if __name__ == "__main__":
 
 		print(f"{name} is a {language} repo with {stars} stars\n")
 
-#! solution 2: Searching the Github API -> 2:38
