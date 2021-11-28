@@ -97,3 +97,17 @@ using namespace std;
 //     }
     
 // }
+
+
+int main()
+{
+    int n;
+    cin >> n; cin.ignore();
+    for (int i = 0; i < n; i++) {
+        int a;
+        int b;
+        cin >> a >> b; cin.ignore();
+        int min = std::min(abs(a-b), abs(100+a-b), abs(100+b-a));
+        cout << min << endl;
+    }
+}
