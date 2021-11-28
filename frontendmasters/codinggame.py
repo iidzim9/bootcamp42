@@ -118,4 +118,3 @@ if len(s.split())>9 and s[0].isupper():c+=1
 if not 'BOT'in a:c+=1
 if 'upvote'in''.join((t,s,a)).lower():c=-1
 print(c)
-
