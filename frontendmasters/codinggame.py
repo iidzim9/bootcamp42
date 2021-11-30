@@ -92,29 +92,63 @@ import math
 
 #*#######################################################
 
-#?mycode
-t=input()
-s=input()
-a=input()
-x=r=0
-tt=t.split(' ')
-if len(tt)>1:
-    for tx in tt:
-        if len(tx)>=2:
-            r+=1
-    if r==len(tt):
-        x+=1
-ss=s.split(' ')
-if len(ss)>9 and ss[0].isupper():x+=1
-if a.find("BOT") == -1:x+=1
-#add upvote condition #!
-print(x)
+# #?mycode
+# t=input()
+# s=input()
+# a=input()
+# x=r=0
+# tt=t.split(' ')
+# if len(tt)>1:
+#     for tx in tt:
+#         if len(tx)>=2:
+#             r+=1
+#     if r==len(tt):
+#         x+=1
+# ss=s.split(' ')
+# if len(ss)>9 and ss[0].isupper():x+=1
+# if a.find("BOT") == -1:x+=1
+# #add upvote condition #!
+# print(x)
 
-#?Maexel's code
-t,s,a=open(0)
-c=0
-if len(t.split())>1 and all(len(p)>2for p in t.split()):c+=1
-if len(s.split())>9 and s[0].isupper():c+=1
-if not 'BOT'in a:c+=1
-if 'upvote'in''.join((t,s,a)).lower():c=-1
-print(c)
+# #?Maexel's code
+# t,s,a=open(0)
+# c=0
+# if len(t.split())>1 and all(len(p)>2for p in t.split()):c+=1
+# if len(s.split())>9 and s[0].isupper():c+=1
+# if not 'BOT'in a:c+=1
+# if 'upvote'in''.join((t,s,a)).lower():c=-1
+# print(c)
+
+#*#######################################################
+
+# s = input().split(' ')[::-1]
+# res = ""
+# for word in s:
+#     res += word + " "
+# print(res)
+
+#*#######################################################
+
+def is_palindrome(i):
+    x = int(bin(i).replace("0b", ""))
+    tmp = x
+    rev = 0
+    while x > 0:
+        rev = rev * 10 + (x % 10)
+        x = x // 10
+    if tmp == rev:
+        return 1
+
+n = int(input())
+sum = cpt = 0
+for i in range(1, n):
+    if is_palindrome(i) == 1:
+        sum += i
+        cpt += 1
+if is_palindrome(int(sum/cpt)):
+    print(int(sum/cpt), " is a palindrome in binary")
+else:
+    print(int(sum/cpt), " is not a palindrome in binary")
+
+#*#######################################################
+
