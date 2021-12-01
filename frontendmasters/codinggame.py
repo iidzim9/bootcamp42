@@ -127,28 +127,37 @@ import math
 #     res += word + " "
 # print(res)
 
+#? shortest code
+# print (" ".join(input().split()[::-1])) 
+
 #*#######################################################
 
-def is_palindrome(i):
-    x = int(bin(i).replace("0b", ""))
-    tmp = x
-    rev = 0
-    while x > 0:
-        rev = rev * 10 + (x % 10)
-        x = x // 10
-    if tmp == rev:
-        return 1
+# def is_palindrome(i):
+#     x = int(bin(i).replace("0b", ""))
+#     tmp = x
+#     rev = 0
+#     while x > 0:
+#         rev = rev * 10 + (x % 10)
+#         x = x // 10
+#     if tmp == rev:
+#         return 1
 
-n = int(input())
-sum = cpt = 0
-for i in range(1, n):
-    if is_palindrome(i) == 1:
-        sum += i
-        cpt += 1
-if is_palindrome(int(sum/cpt)):
-    print(int(sum/cpt), " is a palindrome in binary")
+# n = int(input())
+# sum = cpt = 0
+# for i in range(1, n):
+#     if is_palindrome(i) == 1:
+#         sum += i
+#         cpt += 1
+# print(int(sum/cpt), " is a palindrome in binary") if is_palindrome(int(sum/cpt)) == 1 else print(int(sum/cpt), " is not a palindrome in binary")
+
+#*#######################################################
+
+a, b, c = [int(i) for i in input().split()]
+if a*a+b*b==c*c:
+    x = math.gcd(a, b, c)
+    print(a//x, b//x, c//x)
 else:
-    print(int(sum/cpt), " is not a palindrome in binary")
+    print("NOT A TRIPLE")
 
 #*#######################################################
 
