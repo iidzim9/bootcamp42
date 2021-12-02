@@ -152,12 +152,78 @@ import math
 
 #*#######################################################
 
-a, b, c = [int(i) for i in input().split()]
-if a*a+b*b==c*c:
-    x = math.gcd(a, b, c)
-    print(a//x, b//x, c//x)
+# a, b, c = [int(i) for i in input().split()]
+# if a*a+b*b==c*c:
+#     x = math.gcd(a, b, c)
+#     print(a//x, b//x, c//x)
+# else:
+#     print("NOT A TRIPLE")
+
+#*#######################################################
+
+# print(sum(range(int(input()))))
+
+#*#######################################################
+
+# l, w, h = open(0) #!!!!! ctrl + D
+l=int(input())
+w=int(input())
+h=int(input())
+print(2*(h*w)+2*(h*l)+2*(w*l))
+
+#*#######################################################
+
+a=input
+print(int(a())^int(a())^int(a()))
+
+#*#######################################################
+
+n = int(input())
+for i in range(n):
+    a, b, c = [int(j) for j in input().split()]
+    if a <= b <= c or c <= b <= a:
+        print(b)
+    elif b <= a <= c or c <= a <= b:
+        print(a)
+    elif a <= c <= b or b <= c <= a:
+        print(c)
+
+#? omar's solution 
+n = int(input())
+for i in range(n):
+    print(sorted([int(j) for j in input().split()])[1])
+
+#*#######################################################
+
+a = input()
+n = int(input())
+if a.lower() == "upper" and 0 < n < 27:
+    print(' '.join([chr(x+65)for x in range(n)]))
+elif a.lower() == "lower" and 0 < n < 27:
+    print(' '.join([chr(x+97)for x in range(n)]))
 else:
-    print("NOT A TRIPLE")
+    print("ERROR")
+
+#? 
+case_or_trick = input().lower()
+n = int(input())
+s=""
+if n > 26:
+    s = "ERROR "
+elif case_or_trick=="upper":
+    for i in range(65, 65+n):
+        s+=chr(i)+" "
+elif case_or_trick=="lower":
+    for i in range(97, 97+n):
+        s+=chr(i)+" "
+print(s[:-1])
+
+#*#######################################################
+
+text = input()
+for c in text:
+    if c.isupper():
+        print(c.lower(), end="")
 
 #*#######################################################
 
