@@ -234,21 +234,63 @@ from typing import Collection
 #? 02 Test 2
 #100
 #97 119
-#? Test 3
+#? 03 Test 3
 #1000
 #871 179
 
-def collatz_conjecture():
-    limit = int(input())
-    res = (0, 0)
-    for i in range(2, limit+1):
-        j = i
-        s = 1
-        while 1<j:
-            j = j/2 if not j%2 else j*3+1
-            s+=1
-        if res[1] < s:
-            res = (i, s)
-    print(*res)
+# def collatz_conjecture():
+#     limit = int(input())
+#     res = (0, 0)
+#     for i in range(2, limit+1):
+#         j = i
+#         s = 1
+#         while 1<j:
+#             j = j/2 if not j%2 else j*3+1
+#             s+=1
+#         if res[1] < s:
+#             res = (i, s)
+#     print(*res)
 
-collatz_conjecture()
+# collatz_conjecture()
+
+#*#######################################################
+
+# n = int(input())
+# for i in range(n):
+#     cpt = 0
+#     row = input()
+#     for c in row:
+#         if c.isdigit():
+#             cpt += 1
+#     print(cpt)
+
+# print(len([c for c in row if c in "0123456789"])) #equivalent line 263 - 266
+
+#*#######################################################
+
+#? 01 Test 1
+#7 5 2
+#1 2 3 4 5
+#? 02 Test 2
+#8 5 7
+#4 5 6 7 8
+#? 03 Test 3
+#8 5 8
+#4 5 6 7 8
+#? 04 Test 4 
+#10 7 1         #!!! 
+#1 2 3 4 5 6 7
+
+t = int(input())
+w = int(input())
+c = int(input())
+s=""
+if (t-c>t/2):
+    x=t-c+1
+    for i in range(x-w, x):
+        s+=str(i)+" "
+else:
+    x=t-w+1
+    for i in range(x, t+1):
+        s+=str(i)+" "
+print(s[:-1])
