@@ -32,18 +32,6 @@
 // print((x+y)*min(x,y))
 
 
-#include <iostream>
-#include <string>
-#include <vector>
-#include <algorithm>
-
-using namespace std;
-
-/**
- * Auto-generated code below aims at helping you parse
- * the standard input according to the problem statement.
- **/
-
 // int main()
 // {
 //     int x;
@@ -51,9 +39,6 @@ using namespace std;
 //     int y;
 //     cin >> y; cin.ignore();
 
-//     // Write an answer using cout. DON'T FORGET THE "<< endl"
-//     // To debug: cerr << "Debug messages..." << endl;
-//     // cout << x << " - " << y << endl;
 //     if (x > y)
 //         cout << y * (x + y) << endl;
 //     else
@@ -61,15 +46,6 @@ using namespace std;
 // }
 
 
-// //?
-// // #include <bits/stdc++.h>
-
-// using namespace std;
-
-// /**
-//  * Auto-generated code below aims at helping you parse
-//  * the standard input according to the problem statement.
-//  **/
 
 // int frq[555];
 
